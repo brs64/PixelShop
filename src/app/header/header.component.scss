@@ -1,40 +1,44 @@
+@import '../../styles.scss';
+
 h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem;
-    color: #ffffff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: $retro-font;
+    font-size: 2rem;
+    color: $retro-text;
+    text-shadow: 0 0 10px $retro-border;
     margin: 0;
     padding: 1rem;
     text-align: center;
-    background: linear-gradient(90deg, #b421ad, #ff53cb);
-    border-bottom: 4px solid #b421ad;
-  }
-  
-  nav {
+    background-color: $retro-bg;
+    border-bottom: 5px solid $retro-border;
+}
+
+nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #b421ad;
+    background-color: $retro-bg;
     padding: 0.5rem 0;
-
+    border-top: 3px solid $retro-border;
+    border-bottom: 3px solid $retro-border;
     margin-bottom: 1rem;
-  }
-  
-  a.button {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    color: #ffffff;
+}
+
+a.button {
+    font-family: $retro-font;
+    font-size: 0.9rem;
+    color: $retro-text;
     text-decoration: none;
     margin: 0 1rem;
     padding: 0.5rem 1rem;
-    border: 2px solid #ffffff;
-    border-radius: 25px;
+    border: 2px solid $retro-border;
+    border-radius: 10px;
+    background-color: $retro-bg;
     transition: all 0.3s ease-in-out;
-  }
-  
-  a.button:hover {
-    background-color: #ffffff;
-    color: #b421ad;
+}
+
+a.button:hover {
+    background-color: $retro-border;
+    color: $retro-bg;
     transform: scale(1.1);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  }
+    box-shadow: 0px 4px 8px $retro-border;
+}

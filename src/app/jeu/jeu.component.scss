@@ -1,3 +1,5 @@
+@import '../../styles.scss';
+
 $retro-font: 'Press Start 2P', cursive; // Utiliser une police rétro (Google Fonts)
 $retro-bg: #1a1a2e;
 $retro-border: #e94560;
@@ -5,7 +7,18 @@ $retro-text: #f5f5f5;
 
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+// Conteneur pour organiser les cartes en grille
 .jeu-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); // Trois colonnes
+  gap: 20px; // Espacement entre les cartes
+  padding: 20px;
+  background-color: $retro-bg;
+  justify-items: center; // Centrer les cartes horizontalement
+}
+
+// Style pour chaque carte
+.jeu-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,8 +29,8 @@ $retro-text: #f5f5f5;
   border-radius: 10px;
   box-shadow: 0 0 20px $retro-border;
   font-family: $retro-font;
-  max-width: 400px;
-  margin: 20px auto;
+  width: 300px; // Largeur fixe pour toutes les cartes
+  height: 400px; // Hauteur fixe pour toutes les cartes
 }
 
 .jeu-miniature {
@@ -33,14 +46,15 @@ $retro-text: #f5f5f5;
 }
 
 .jeu-titre {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 10px;
+  font-family: $retro-font;
 }
 
 .jeu-plateforme,
 .jeu-developpeur,
 .jeu-date,
 .jeu-stock {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   margin: 5px 0;
 }

@@ -7,14 +7,14 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class JeuxService {
-  constructor(public http: HttpClient) { }
+  constructor(private httpClient: HttpClient) {} // Injecter HttpClient directement
 
   getJeux(): Observable<JEU[]> {
-    return this.http.get<JEU[]>('http://localhost:3000/Jeux');
+    return this.httpClient.get<JEU[]>('http://localhost:3000/Jeux');
   }
 
   getJeuById(id: number): Observable<JEU> {
-    return this.http.get<JEU>(`http://localhost:3000/Jeux/${id}`);
+    return this.httpClient.get<JEU>(`http://localhost:3000/Jeux/${id}`);
   }
 
   addJeu(nouvJeu: JEU): Observable<JEU> {
@@ -24,7 +24,7 @@ export class JeuxService {
         let maxId = 0;
         jeux.forEach(jeu => { maxId = (jeu.id > maxId ? jeu.id : maxId); });
         nouvJeu.id = maxId + 1;
-        return this.http.post<JEU>('http://localhost:3000/Jeux', nouvJeu);
+        return this.httpClient.post<JEU>('http://localhost:3000/Jeux', nouvJeu);
       })
     );
   }
