@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { jeuComponent } from './jeu/jeu.component';
 import { ListJeuxComponent } from './list-jeux/list-jeux.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ListReservationsComponent } from './list-reservations/list-reservations.component';
+import { ReservationComponent } from './reservation/reservation.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     HomeComponent,
     jeuComponent,
-    ListJeuxComponent
+    ListJeuxComponent,
+    ListReservationsComponent,
+    ReservationComponent
   ],
   imports: [
     BrowserModule,

@@ -6,4 +6,5 @@ export class Reservation {
     plateforme!: string;
     dateDeReservation!: Date;
     statut!: string;
+    nomJeu: any;
 }

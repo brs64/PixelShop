@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { JEU } from '../models/jeu.model';
 import { JeuxService } from '../services/jeux.service';
+import { Router } from '@angular/router'; // Import ajouté
 
 @Component({
   selector: 'app-list-jeux',
@@ -11,7 +12,7 @@ import { JeuxService } from '../services/jeux.service';
 export class ListJeuxComponent implements OnInit {
   listJeux!: JEU[];
 
-  constructor(public jeuxService: JeuxService) { }
+  constructor(public jeuxService: JeuxService, private router: Router) { } // Router ajouté
 
   ngOnInit(): void {
     this.jeuxService.getJeux().subscribe((jeux) => {

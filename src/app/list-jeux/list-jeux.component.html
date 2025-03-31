@@ -1,5 +1,7 @@
 <div class="list-jeux-container">
     <ng-container *ngFor="let jeu of listJeux">
-      <app-jeu *ngIf="jeu.stock > 0" [Jeu]="jeu"></app-jeu>
+      <a [routerLink]="['/jeu', jeu.id]" class="jeu-link">
+        <app-jeu *ngIf="jeu.stock > 0" [Jeu]="jeu"></app-jeu>
+      </a>
     </ng-container>
-  </div>
+</div>

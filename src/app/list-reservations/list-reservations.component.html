@@ -1,0 +1,15 @@
+<div class="list-reservations-container">
+  <h2>Liste des Réservations</h2>
+  <ng-container *ngIf="listReservations && listReservations.length > 0; else noReservations">
+    <div *ngFor="let reservation of listReservations" class="reservation-card">
+      <a [routerLink]="['/reservation', reservation.id]" class="reservation-link">
+        <h3>{{ reservation.nomJeu }}</h3>
+        <p>Réservé par : {{ reservation.nomClient }}</p>
+        <p>Date de réservation : {{ reservation.dateDeReservation | date }}</p>
+      </a>
+    </div>
+  </ng-container>
+  <ng-template #noReservations>
+    <p>Aucune réservation disponible.</p>
+  </ng-template>
+</div>

@@ -1,0 +1,11 @@
+<div class="reservation-container">
+  <div class="reservation-card">
+    <h2 class="reservation-titre">Réservation #{{ currentReservation.id }}</h2>
+    <p class="reservation-detail"><strong>Nom du client:</strong> {{ currentReservation.nomClient }}</p>
+    <p class="reservation-detail"><strong>Email:</strong> {{ currentReservation.emailClient }}</p>
+    <p class="reservation-detail"><strong>Téléphone:</strong> {{ currentReservation.telephoneClient }}</p>
+    <p class="reservation-detail"><strong>Plateforme:</strong> {{ currentReservation.plateforme }}</p>
+    <p class="reservation-detail"><strong>Date de réservation:</strong> {{ currentReservation.dateDeReservation | date }}</p>
+    <p class="reservation-detail"><strong>Statut:</strong> {{ currentReservation.statut }}</p>
+  </div>
+</div>
